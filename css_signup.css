@@ -1,0 +1,72 @@
+body {
+    background-image:url("https://img.freepik.com/free-photo/close-up-woman-s-hand-giving-house-key-man-wooden-table_23-2148204009.jpg?size=626&ext=jpg&ga=GA1.2.886802673.1696325082&semt=sph");
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    border: 1px solid gray;
+    padding: 20px;
+    background:#18181da5;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h4 {
+    color: #fff;
+}
+
+.form-group {
+    margin: 10px 0;
+    color:#fff;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    
+}
+
+input:focus {
+    border-color: #fff;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #121216a5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align:center;
+}
+
+.button:hover {
+    background-color: grey;
+}
+
+.message {
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+}

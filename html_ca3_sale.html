@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Sale Form</title>
+    <link rel="stylesheet" href="css_sale.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>"GLOBAL PROPERTIES"</h1>
+        <hr>
+        <h2>Property Sale Form</h2>
+        <form action="/submit" method="post">
+
+            <fieldset>
+                <legend>Page 1 of 2</legend>
+                <h2>User Details:</h2>
+        <hr>
+        <br>
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName" required>
+
+                <label for="userEmail">Your Email:</label>
+                <input type="text" id="userEmail" name="userEmail" required>
+
+                <label for="userPhone">Your Phone:</label>
+                <input type="text" id="userPhone" name="userPhone" required>
+
+                <label for="userPicture">Upload Your Picture:</label>
+                <input type="file" id="userPicture" name="userPicture" accept="image/*">
+
+                <h2>Property Details:</h2>
+                <hr>
+
+                <label for="propertyType">Property Type:</label>
+                <input type="text" id="propertyType" name="propertyType" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <button class="next-btn" type="button" onclick="nextPage()">Next</button>
+            </fieldset>
+            
+            <fieldset style="display: none;">
+                <legend>Page 2 of 2</legend>
+                
+                <h2>Property Details:</h2>
+                <hr><br><br>
+                
+                <label for="propertyPictures">Upload Pictures (JPEG or PNG):</label>
+                <input type="file" id="propertyPictures" name="propertyPictures" accept="image/jpeg, image/png" multiple>
+
+                <label for="propertyPDF">Upload PDF (Property Documents):</label>
+                <input type="file" id="propertyPDF" name="propertyPDF" accept=".pdf">
+
+                <div class="options">
+                    <label>Property Type:</label>
+                    <div>
+                        <input type="radio" id="house" name="propertyTypeRadio" value="House">House</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="apartment" name="propertyTypeRadio" value="Apartment">Apartment</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="land" name="propertyTypeRadio" value="Land">Land</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="farm" name="propertyTypeRadio" value="House">Farm</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="town house" name="propertyTypeRadio" value="House">Town House</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="cottage" name="propertyTypeRadio" value="House">Cottage</input>
+                    </div>
+                </div>
+
+                <div class="options">
+                    <label>Property Features:</label>
+                    <div>
+                        <input type="checkbox" id="feature1" name="features[]" value="Swimming Pool">Swimming Pool</input>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature2" name="features[]" value="Garden">Garden</input>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature3" name="features[]" value="Garage">Garage</input>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature3" name="features[]" value="Water">Water Supply</input>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature3" name="features[]" value="Electricity">Electricity Supply</input>
+                    </div>
+                </div>
+
+                <div class="options">
+                    <label for="propertyCondition">Property Condition:</label>
+                    <div>
+                        <input type="radio" id="renovation" name="propertyCondition" value="furnished">Well Furnished</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="excellent" name="propertyCondition" value="Excellent">Excellent</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="good" name="propertyCondition" value="Good">Good</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="renovation" name="propertyCondition" value="Needs Renovation">Needs Minor Renovation</input>
+                    </div>
+                    <div>
+                        <input type="radio" id="renovation" name="propertyCondition" value="Needs Renovation">Needs Major Renovation</input>
+                    </div>
+                </div>
+                <label for="propertyQuestion">Owner's feedback about Property:</label>
+                <textarea id="propertyQuestion" name="propertyQuestion" rows="4" required></textarea>
+
+                <button class="prev-btn" type="button" onclick="prevPage()">Previous</button>
+                <button class="submit" type="submit">Submit</button>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <script>
+        function nextPage() {
+            // Hide Page 1 and show Page 2
+            document.querySelector('fieldset:nth-of-type(1)').style.display = 'none';
+            document.querySelector('fieldset:nth-of-type(2)').style.display = 'block';
+        }
+
+        function prevPage() {
+            // Hide Page 2 and show Page 1
+            document.querySelector('fieldset:nth-of-type(2)').style.display = 'none';
+            document.querySelector('fieldset:nth-of-type(1)').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=800);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 58px;
+    color:black;
+    margin-left: -20px;
+}
+
+h2{
+    margin-left: -20px;
+}
+
+ul {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+.menu-bar {
+    /* background: rgb(145, 207, 236);  */
+    text-align: right;
+    cursor: pointer;
+    
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: black;
+    width: 75%;
+    text-align: center;
+}
+.menu-bar ul li {
+    width: 100%;
+    margin: 15px;
+    padding: 15px;
+    padding-left: 15px;
+    position: relative;
+    bottom:  0px;
+    transition: NONE;
+}
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+.menu-bar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: gray;
+    position: absolute;
+    left:  0;
+    right: 1;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.menu-bar ul li:hover::after {
+    width: 100%;
+}
+.welcome {
+    padding-top: 50px;
+    padding-left: 50px;    
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+.logo {
+    width: 130px;
+    cursor: pointer;
+    margin-top: -40px;
+    margin-left: 30px;
+}
+button {
+    width: 10%;
+    padding: 12px;
+    text-align: center;
+    margin: 20px 20px;
+    margin-left: -20px;
+    margin-right: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid gray;
+    background: transparent; 
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span {
+    background: white;
+    height: 100px;
+    width: 0px;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    /* transition: 0.5s; */
+}
+button:hover span {
+    width: 100%;
+}
+button:hover {
+    border: none;
+    color: black;
+    transform-style: preserve-3d;
+}
+.active, .menu-bar ul li:hover {
+    background: none;
+    border-radius: 3px;
+}
+
+/* .menu-bar ul li:hover .sub-menu-1 ul { 
+    display: inline-flex;
+} */
+.sub-menu-1 {
+    display:none;
+    transition: none;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: none;
+    margin-top: 15px;
+    margin-left: -155%;
+    cursor: pointer;
+    transition: none;
+} 
+
+.sub-menu-2 {
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-2 {
+    display: block;
+    position: absolute;
+    background: none;
+    margin-top: 15px;
+    margin-left: -220px;
+    cursor: pointer;
+}
+
+.sub-menu-3 {
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-3 {
+    display: block;
+    position: absolute;
+    background: none;
+    margin-top: 15px;
+    margin-left: -60px;
+    cursor: pointer;
+}
+
+.button_link button a {text-decoration: none;
+    color: #000;
+    text-transform: uppercase;}
+
+    
